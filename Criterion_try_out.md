@@ -12,6 +12,23 @@ cargo build
 ```
 
 Step 2 - add example from tutorial
+
+Step 2.1 - create test code inside src/lib.rs
+
+```bash
+cat <<EOF >./src/lib.rs
+#[inline]
+#[allow(dead_code)]
+fn fibonacci(n: u64) -> u64 {
+    match n {
+        0 => 1,
+        1 => 1,
+        n => fibonacci(n-1) + fibonacci(n-2),
+    }
+}
+EOF
+```
+
 Step 2.1 - add new folder benches
 
 ```bash
@@ -33,4 +50,10 @@ pub fn criterion_benchmark(c: &mut Criterion) {
 criterion_group!(benches, criterion_benchmark);
 criterion_main!(benches);
 EOF
+```
+
+Step3 - Run Benchmark
+
+```bash
+cargo bench
 ```

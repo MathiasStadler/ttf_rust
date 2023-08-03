@@ -13,7 +13,7 @@ criterion = "0.5.1"
 
 # desc from here
 # https://doc.rust-lang.org/cargo/reference/cargo-targets.html
-[[bin]]
+#[[bin]]
 #name = "01_main"
 #test = false
 #bench = false

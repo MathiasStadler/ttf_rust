@@ -10,8 +10,6 @@
 */
 #![feature(test)]
 
-use test::Bencher;
-
 fn main() {
     println!("Hello, test_println!");
 }
@@ -23,10 +21,10 @@ mod tests {
         println!("test_println");
         assert_eq!("test_println", "test_println");
     }
+    /*
     #[bench]
-fn bench_add_two(b: &mut Bencher) {
-    b.iter(|| add_two(2));
+    fn bench_add_two(b: &mut Bencher) {
+        b.iter(|| add_two(2));
+    }
+    */
 }
-}
-
-
