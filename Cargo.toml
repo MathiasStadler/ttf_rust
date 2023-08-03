@@ -7,12 +7,20 @@ edition = "2021"
 
 [dependencies]
 bencher = "0.1.5"
+criterion = "0.5.1"
 
 
 
 # desc from here
 # https://doc.rust-lang.org/cargo/reference/cargo-targets.html
 [[bin]]
-name = "01_main"
-test = false
-bench = false
+#name = "01_main"
+#test = false
+#bench = false
+
+#from here
+#https://bheisler.github.io/criterion.rs/book/getting_started.html
+[[bench]]
+name = "my_benchmark"
+harness = false
+
