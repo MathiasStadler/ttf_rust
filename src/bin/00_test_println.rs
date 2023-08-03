@@ -9,6 +9,8 @@
     echo "bench => $NAME";cargo bench --bin $NAME;
 */
 #![feature(test)]
+#[inline]
+#[allow(dead_code)]
 
 fn main() {
     println!("Hello, test_println!");
@@ -21,7 +23,7 @@ mod tests {
         println!("test_println");
         assert_eq!("test_println", "test_println");
     }
-    /*
+    /* for later
     #[bench]
     fn bench_add_two(b: &mut Bencher) {
         b.iter(|| add_two(2));

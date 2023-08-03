@@ -8,6 +8,8 @@ edition = "2021"
 [dependencies]
 bencher = "0.1.5"
 criterion = "0.5.1"
+gag = "1.0.0"
+lazy_static = "1.4.0"
 
 
 

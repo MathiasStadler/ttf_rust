@@ -1,4 +1,4 @@
-# Criterion try out
+# Criterion.rs try out
 
 [FROM HERE](https://bheisler.github.io/criterion.rs/book/getting_started.html)
 

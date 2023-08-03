@@ -5,10 +5,25 @@
     bench = cargo bench --bin 01_main
 */
 
+// FROM HERE
+// https://jeffkreeftmeijer.com/rust-stdin-stdout-testing/
+
 #![feature(test)]
-fn main() {
-    println!("Hello, TTF_RUST!");
+#[allow(unused_imports)]
+use std::io;
+use std::io::Write;
+
+fn main() -> io::Result<()> {
+    let buffer = "Hallo\n".to_string();
+
+    // io::stdin().read_to_string(&mut buffer)?;
+    //org
+    //io::stdout().write_all(buffer.to_uppercase().as_bytes())?;
+    io::stdout().write_all(buffer.as_bytes())?;
+
+    Ok(())
 }
+
 
 #[cfg(test)]
 mod tests {
